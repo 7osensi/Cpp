@@ -10,31 +10,32 @@ class myClass {
 
     public:
         myClass() 
-        : Num{0} {}
+        : Num{0} {cout << "Default constructor" << endl;};
         
         myClass(double temp) 
-        : Num{temp} {}
+        : Num{temp} {cout << "Parametarized constructor" << endl;}
 
-        myClass operator+ (myClass B) {
-            return this->Num + B.Num;
+        myClass operator+ (myClass B) const{
+            cout << "+ operator" << endl;
+            return Num + B.Num;
         }
 
-        myClass operator- (myClass B) {
-            return this->Num - B.Num;
+        myClass operator- (myClass B) const{
+            return Num - B.Num;
         }
 
-        myClass operator* (myClass B) {
+        myClass operator* (myClass B) const{
             return this->Num * B.Num;
         }
 
-        myClass operator/ (myClass B) {
+        myClass operator/ (myClass B) const{
             if(B.Num == 0) {
                 throw runtime_error("Division by zero error");
             }
             return this->Num / B.Num;
         }
 
-        myClass operator% (myClass B) {
+        myClass operator% (myClass B) const{
             if(B.Num == 0.0) {
                 throw runtime_error("Modulo by zero error");
             }
@@ -49,10 +50,10 @@ class myClass {
 
 int main() {
     myClass A{100}, B{50};
-    myClass C;
+    // myClass C;
     
-    B = A + B; // C.operator=(A.operator+(myClass(B)));
-    B.display();
+    myClass C = A + B; // C.operator=(A.operator+(myClass(B)));
+    C.display();
     
     C = A - B;
     C.display();

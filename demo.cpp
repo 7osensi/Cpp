@@ -200,6 +200,28 @@ class MyClass {
             delete[] data;
         }
 
+        // copy constructor
+        MyClass(const MyClass & rhs) {
+            cout << "Copy Constructor" << endl;
+            data = new int[5];
+            for(int i = 0; i < 5; i++) {
+                data[i] = rhs.data[i];
+            }
+        }
+        // assignment Operator
+        MyClass& operator= (const MyClass & rhs) {
+            cout << "Assignment Operator" << endl;
+            if(&rhs == this) {
+                return * this;
+            }
+            delete[] data;
+            data = new int[5];
+            for(int i = 0; i < 5; i++) {
+                data[i] = rhs.data[i];
+            }
+            return * this;
+        }
+
         void PrintingData() {
             for(int i = 0; i < 5; i++) {
                 cout << data[i] << endl;
@@ -212,9 +234,22 @@ class MyClass {
 };
 
 int main() {
-    MyClass myclass1;
-    myclass1.PrintingData();
+    // MyClass myclass1;
+
+    // myclass1.SetData(0, 100000);
+    // myclass1.SetData(1, 555);
+    // myclass1.SetData(2, 66666);
+
+    // MyClass myclass2;
+    // myclass2 = myclass1;
+    
+    // myclass1.PrintingData();
+    // myclass2.PrintingData();
+
+    int i = 10;
+
+    10 = i;
+
     return 0;
 }
-
 #endif
