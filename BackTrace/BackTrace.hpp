@@ -28,11 +28,9 @@ void fun2(BackTrace& backtrace);
 void fun3(BackTrace& backtrace);
 
 #define EnterFn(backtrace) \
-    backtrace.addTrace("Entering " + std::string(__PRETTY_FUNCTION__)); \
-    // std::cout << "Entering " << __PRETTY_FUNCTION__ << std::endl;
+    backtrace.addTrace("Entering " + std::string(__PRETTY_FUNCTION__)); 
 
 #define ExitFn(backtrace) \
-    backtrace.addTrace("Exiting " + std::string(__PRETTY_FUNCTION__)); \
-    // std::cout << "Exiting " << __PRETTY_FUNCTION__ << std::endl;
+    backtrace.addTrace("Exiting " + std::string(__PRETTY_FUNCTION__)); 
 
 #endif // BACKTRACE_HPP

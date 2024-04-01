@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 
@@ -20,19 +20,19 @@ class LOG {
         
         void Dump(void) {
             for (const auto& entry : logBuffer) {
-            std::string levelStr;
-            switch (entry.first) {
-                case LogLevel::INFO:
-                    levelStr = "INFO";
-                    break;
-                case LogLevel::WARNING:
-                    levelStr = "WARNING";
-                    break;
-                case LogLevel::ERROR:
-                    levelStr = "ERROR";
-                    break;
-            }
-            std::cout << "[" << levelStr << "] " << entry.second << std::endl;
+                std::string levelStr;
+                switch (entry.first) {
+                    case LogLevel::INFO:
+                        levelStr = "INFO";
+                        break;
+                    case LogLevel::WARNING:
+                        levelStr = "WARNING";
+                        break;
+                    case LogLevel::ERROR:
+                        levelStr = "ERROR";
+                        break;
+                }
+                std::cout << "[" << levelStr << "] " << entry.second << std::endl;
             }
         }
 
@@ -50,6 +50,6 @@ int main() {
 
     logger.Dump();
     logger.Clear();
-
+    
     return 0;
 }

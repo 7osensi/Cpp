@@ -1,0 +1,6 @@
+/home/hussienhosny/Cpp/lab_cmake/lab02/lib/CMakeFiles/hellobinary.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/lib/CMakeFiles/edit_cache.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/lib/CMakeFiles/rebuild_cache.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/lib/lib/CMakeFiles/wifi_lib.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/lib/lib/CMakeFiles/edit_cache.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/lib/lib/CMakeFiles/rebuild_cache.dir

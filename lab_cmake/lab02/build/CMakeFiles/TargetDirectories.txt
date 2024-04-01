@@ -1,0 +1,14 @@
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/CMakeFiles/hellobinary.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/CMakeFiles/edit_cache.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/CMakeFiles/rebuild_cache.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/CMakeFiles/list_install_components.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/CMakeFiles/install.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/CMakeFiles/install/local.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/CMakeFiles/install/strip.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/lib/CMakeFiles/wifi_lib.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/lib/CMakeFiles/edit_cache.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/lib/CMakeFiles/rebuild_cache.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/lib/CMakeFiles/list_install_components.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/lib/CMakeFiles/install.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/lib/CMakeFiles/install/local.dir
+/home/hussienhosny/Cpp/lab_cmake/lab02/build/lib/CMakeFiles/install/strip.dir

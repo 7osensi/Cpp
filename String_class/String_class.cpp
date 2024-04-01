@@ -153,32 +153,27 @@
 
     int main() {
         
-        String s1; // Default constructor        
+        String s1; // Default constructor 
+        String temp = "Hussein";
+        s1 = temp;
+        // std::cout << s1.printString() << std::endl;       
         
-        String s2("Bob"); // Parametarized constructor : s2 = Bob
+        // String s2("Bob"); // Parametarized constructor : s2 = Bob
 
-        String s3(s2); // Copy constructor : s3 = Bob
+        // String s3(s2); // Copy constructor : s3 = Bob
         
         String s4("James");
-        String s5; 
-        s5 = s4; // Copy-assigment operator : s5 = James
+        // String s5; 
+        // s5 = s4; // Copy-assigment operator : s5 = James
 
-        String s6("Sam");
-        String s7(std::move(s6)); // Move Operator : s7 = Sam & s6 resources are stolen
+        // String s6("Sam");
+        // String s7(std::move(s6)); // Move Operator : s7 = Sam & s6 resources are stolen
 
-        String s8("George");
-        String s9;
-        s9 = (std::move(s8)); // Move Operator : s9 = George & s8 resources are stolen
+        // String s8("George");
+        // String s9;
+        // s9 = (std::move(s8)); // Move Operator : s9 = George & s8 resources are stolen
 
-        std::cout << s2 << std::endl; // '<<' Operator : Bob
-        
-    }
-
-
-
-
-
-
+        // std::cout << s2 << std::endl; // '<<' Operator : Bob
 
         // std::cout << std::endl;
 
@@ -191,7 +186,7 @@
         // std::cout << std::endl; // newline
 
         // if(s4 == s1) {
-        //     std::cout << "EQUAL using s4 == s1" << std::endl;
+        //     std::cout << "EQUAL  s4 == s1" << std::endl;
         // }
 
         // if(s4 == "Tom") {

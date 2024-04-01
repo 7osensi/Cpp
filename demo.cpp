@@ -178,7 +178,7 @@ int main() {
 }
 #endif
 
-#if 1
+#if 0
 
 #include <iostream>
  
@@ -246,9 +246,100 @@ int main() {
     // myclass1.PrintingData();
     // myclass2.PrintingData();
 
-    int i = 10;
+    constexpr int x = 0;
+    constexpr int y = 0;
+    static_assert(x == y, "x != y");
 
-    10 = i;
+    return 0;
+}
+#endif
+
+#if 1
+
+#include <iostream>
+#include <string_view>
+#include <vector>
+#include <unordered_map>
+ 
+using namespace std;
+
+class Person {
+    private:
+        std::string Name;
+        int Age;
+        std::string Gender;
+
+    public:
+        Person(){cout << "Person Constructor" << endl;}
+        Person(std::string name, int age, std::string gender) 
+        : Name(name), Age(age), Gender(gender)
+        {cout << "Person Paramatized Constructor" << endl;}
+        virtual void display(){
+            cout << "Name: " << Name << " " << "Age: " << Age << " " << "Gender: " << Gender << " " << endl;
+        }
+        // virtual to make sure the derived destructor is called
+        virtual ~Person(){cout << "Person Destructor" << endl;}
+};
+
+class Student : public Person{
+    private:
+        double GPA;
+        std::string Faculty;
+    public:
+        Student(){cout << "Student Constructor" << endl;}
+        Student(std::string name, int age, std::string gender, double gpa, std::string faculty) 
+        : Person(name, age, gender), GPA(gpa), Faculty(faculty)
+        {cout << "Student Paramatized Constructor" << endl;}
+        
+        // Function overrdiding 
+        void display() override{
+            Person::display();
+            cout << "GPA: " << GPA << " " << "Faculty: " << Faculty << " " << endl;
+        }
+        ~Student(){cout << "Student Destructor" << endl;}
+};
+
+class Employee : public Person{
+    private:
+        double Salary;
+    public:
+        Employee(std::string name, int age, std::string gender, double salary)
+        :Person(name, age, gender), Salary(salary)
+        {cout << "Employee Constructor" << endl;}
+        // Function overrdiding 
+        void display() override{
+            Person::display();
+            cout << "Salary: " << Salary << " " << endl;
+        }
+        ~Employee(){cout << "Employee Destructor" << endl;}
+};
+
+int main() {
+    // Person* ptr = new Student;
+    // delete ptr;
+    
+    
+    // Person* ptr;
+    // Student Hussein("Hussein", 25, "MALE", 3.5, "Engineering");
+    // // Employee Mahmoud("Mahmoud", 27, "MALE", 5000.0);
+
+    // ptr = &Hussein;
+    // ptr->display();
+
+    using scoreMap = std::unordered_map<std::string, int>;
+
+    scoreMap map;
+    map["Mahmoud"] = 17;
+    map["Yomna"] = 23;
+    map["Hussein"] = 25;
+    
+    for(scoreMap::const_iterator it = map.begin(); it != map.end(); it++){
+        // std::cout << "Key " << it->first << std::endl; 
+        // std::cout << "Value " << it->second << std::endl;
+        auto& key = it->first;
+        auto& value = it->second;
+        std::cout << key << " = " << value << std::endl;
+    }
 
     return 0;
 }
